@@ -58,17 +58,39 @@
 // dog.breed = 'Black Lab'; // dog['breed'] = 'Black Lab';
 // console.log(dog);
 
-var posts = [
-  {
-    title: 'Cats are mediocre',
-    author: 'Colt',
-    comments: ['Awesome post', 'terrible post']
-  },
-  {
-    title: 'Cats are actually awesome',
-    author: 'Cat Luvr',
-    comments: ['<3', 'Go to hell I hat you']
-  }
-];
+// var posts = [
+//   {
+//     title: 'Cats are mediocre',
+//     author: 'Colt',
+//     comments: ['Awesome post', 'terrible post']
+//   },
+//   {
+//     title: 'Cats are actually awesome',
+//     author: 'Cat Luvr',
+//     comments: ['<3', 'Go to hell I hat you']
+//   }
+// ];
 
-console.log(posts[1].comments[1]);
+// console.log(posts[1].comments[1]);
+
+// Objects Quiz
+// =====================================
+
+// var someObject = {};
+
+// someObject._name = 'Hedwig';
+
+// someObject.age = 6;
+
+// var prop = 'color';
+// someObject[prop] = 'red';
+
+// console.log(someObject);
+
+var someObject = {
+  friends: [{ name: 'Malfoy' }, { name: 'Crabbe' }, { name: 'Goyle' }],
+  color: 'baby blue',
+  isEvil: true
+};
+
+console.log(someObject.friends[0].name);
