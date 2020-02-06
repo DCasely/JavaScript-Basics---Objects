@@ -168,38 +168,61 @@
 // JS METHODS
 // ====================================
 
-var obj = {
-  name: 'Chuck',
-  age: 45,
-  isCool: false,
-  friends: ['bob', 'tina'],
-  add: function(x, y) {
-    return x + y;
-  }
-};
+// var obj = {
+//   name: 'Chuck',
+//   age: 45,
+//   isCool: false,
+//   friends: ['bob', 'tina'],
+//   add: function(x, y) {
+//     return x + y;
+//   }
+// };
 
-console.log(obj);
-var add = obj.add(10, 5);
-console.log(add);
+// console.log(obj);
+// var add = obj.add(10, 5);
+// console.log(add);
 
-function speak() {
-  return 'Woof!';
+// function speak() {
+//   return 'Woof!';
+// }
+// // Name space collision
+// function speak() {
+//   return 'MEOW!';
+// }
+// var dog = speak();
+// console.log(dog);
+
+// var dogSpace = {};
+// dogSpace.speak = function() {
+//   return 'WOOF!';
+// };
+// var catSpace = {};
+// catSpace.speak = function() {
+//   return 'MEOW!';
+// };
+
+// dogSpace.speak();
+// catSpace.speak();
+
+var comments = {};
+comments.data = ['Good Job!', 'Bye', 'Lame...'];
+console.log(comments);
+
+function print(arr) {
+  arr.forEach(function(el) {
+    console.log(el);
+  });
 }
-// Name space collision
-function speak() {
-  return 'MEOW!';
-}
-var dog = speak();
-console.log(dog);
 
-var dogSpace = {};
-dogSpace.speak = function() {
-  return 'WOOF!';
-};
-var catSpace = {};
-catSpace.speak = function() {
-  return 'MEOW!';
+print(comments.data);
+console.log(comments.data);
+
+comments.print = function() {
+  this.data.forEach(function(el) {
+    console.log(el);
+  });
 };
 
-dogSpace.speak();
-catSpace.speak();
+console.log(comments.print);
+console.log(comments);
+comments.print();
