@@ -37,23 +37,38 @@
 // =========================================
 
 // array
-var dogs = ['Rusty', 'Lucky', 'Bubba'];
-console.log(dogs);
-console.log(dogs[1]);
-dogs.push('Wyatt');
-console.log(dogs);
-console.log(dogs[1]); // Lucky
-dogs[1] = 'Lucy'; // Reassigned to Lucy
-console.log(dogs);
+// var dogs = ['Rusty', 'Lucky', 'Bubba'];
+// console.log(dogs);
+// console.log(dogs[1]);
+// dogs.push('Wyatt');
+// console.log(dogs);
+// console.log(dogs[1]); // Lucky
+// dogs[1] = 'Lucy'; // Reassigned to Lucy
+// console.log(dogs);
 
-// object
-var dog = {
-  name: 'Bubba',
-  breed: 'Lab'
-};
-console.log(dog);
-console.log(dog['name']); // console.log(dog.name);
-dog['age'] = 6; // dog.age = 6;
-console.log(dog);
-dog.breed = 'Black Lab'; // dog['breed'] = 'Black Lab';
-console.log(dog);
+// // object
+// var dog = {
+//   name: 'Bubba',
+//   breed: 'Lab'
+// };
+// console.log(dog);
+// console.log(dog['name']); // console.log(dog.name);
+// dog['age'] = 6; // dog.age = 6;
+// console.log(dog);
+// dog.breed = 'Black Lab'; // dog['breed'] = 'Black Lab';
+// console.log(dog);
+
+var posts = [
+  {
+    title: 'Cats are mediocre',
+    author: 'Colt',
+    comments: ['Awesome post', 'terrible post']
+  },
+  {
+    title: 'Cats are actually awesome',
+    author: 'Cat Luvr',
+    comments: ['<3', 'Go to hell I hat you']
+  }
+];
+
+console.log(posts[1].comments[1]);
