@@ -87,10 +87,80 @@
 
 // console.log(someObject);
 
-var someObject = {
-  friends: [{ name: 'Malfoy' }, { name: 'Crabbe' }, { name: 'Goyle' }],
-  color: 'baby blue',
-  isEvil: true
-};
+// var someObject = {
+//   friends: [{ name: 'Malfoy' }, { name: 'Crabbe' }, { name: 'Goyle' }],
+//   color: 'baby blue',
+//   isEvil: true
+// };
 
-console.log(someObject.friends[0].name);
+// console.log(someObject.friends[0].name);
+
+var movieDB = [
+  { title: 'Training Day', rating: '5', hasWatched: true },
+  { title: 'Ad Astra', rating: '4', hasWatched: false },
+  { title: 'Bad Boys', rating: '5', hasWatched: true },
+  { title: 'Scarlet', rating: '3', hasWatched: false }
+];
+
+console.log(movieDB);
+
+// My Solution Using a FOR LOOP
+function moviesWatched(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].hasWatched === true) {
+      console.log(
+        'You have watched "' +
+          array[i].title +
+          '" - ' +
+          array[i].rating +
+          ' stars'
+      );
+    } else
+      console.log(
+        'You have not seen "' +
+          array[i].title +
+          '" - ' +
+          array[i].rating +
+          ' stars'
+      );
+  }
+}
+
+moviesWatched(movieDB);
+
+// Colt Steele's Solution
+console.log('***** Colt Solution *****');
+
+var movies = [
+  {
+    title: 'In Bruges',
+    hasWatched: true,
+    rating: 5
+  },
+  {
+    title: 'Frozen',
+    hasWatched: false,
+    rating: 4.5
+  },
+  {
+    title: 'Les Meserable',
+    hasWatched: false,
+    rating: 3.5
+  }
+];
+
+movies.forEach(function(movie) {
+  console.log(buildString(movie));
+});
+
+function buildString(movie) {
+  var result = 'You have ';
+  if (movie.hasWatched) {
+    result += 'watched ';
+  } else {
+    result += 'not seen ';
+  }
+  result += '"' + movie.title + '" - ';
+  result += movie.rating + ' stars';
+  return result;
+}
